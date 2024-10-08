@@ -4,5 +4,6 @@ return {
   keys = {
     {"<leader>fw", "<cmd>Telescope live_grep<cr>", { desc = "Find word" }}, 
     {"<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find file" }}, 
+    {"<leader>fb", "<cmd>Telescope buffers<cr>", {desc = "Find buffer" }},
   }
 }

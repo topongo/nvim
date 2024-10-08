@@ -8,6 +8,8 @@ vim.opt.rtp:prepend(lazypath)
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
+vim.opt.relativenumber = true
+vim.opt.number = true
 
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
@@ -17,6 +19,20 @@ vim.g.maplocalleader = "\\"
 
 -- Setup colorscheme for bufferline
 vim.opt.termguicolors = true
+
+local map = vim.api.nvim_set_keymap
+map("n", "<Up>", "<Nop>", { noremap = true, silent = true })
+map("n", "<Down>", "<Nop>", { noremap = true, silent = true })
+map("n", "<Left>", "<Nop>", { noremap = true, silent = true })
+map("n", "<Right>", "<Nop>", { noremap = true, silent = true })
+map("i", "<Up>", "<Nop>", { noremap = true, silent = true })
+map("i", "<Down>", "<Nop>", { noremap = true, silent = true })
+map("i", "<Left>", "<Nop>", { noremap = true, silent = true })
+map("i", "<Right>", "<Nop>", { noremap = true, silent = true })
+map("v", "<Up>", "<Nop>", { noremap = true, silent = true })
+map("v", "<Down>", "<Nop>", { noremap = true, silent = true })
+map("v", "<Left>", "<Nop>", { noremap = true, silent = true })
+map("v", "<Right>", "<Nop>", { noremap = true, silent = true })
 
 -- Setup lazy.nvim
 require("lazy").setup(
