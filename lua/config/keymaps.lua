@@ -3,12 +3,6 @@
 -- Add any additional keymaps here
 --
 
-local map = vim.keymap.set
-
 local map = vim.api.nvim_set_keymap
-
-map("n", "<Down>", "<Nop>")
-map("n", "<Left>", "<Nop>")
-map("n", "<Right>", "<Nop>")
 
 
