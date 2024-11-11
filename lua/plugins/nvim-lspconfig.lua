@@ -14,6 +14,7 @@ return {
   },
   opts = {
     servers = {
+      rust_analyzer = {},
       taplo = {
         keys = {
           {
