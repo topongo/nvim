@@ -30,7 +30,10 @@ local cmp = require'cmp'
       -- { name = 'snippy' }, -- For snippy users.
     }, {
       { name = 'buffer' },
-    })
+    }),
+    opts = function(_, opts)
+      table.insert(opts, { name = "git" })
+    end,
   })
 
   -- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
