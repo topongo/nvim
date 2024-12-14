@@ -38,6 +38,8 @@ return {
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
     local keymap = vim.keymap -- for conciseness
 
+    vim.lsp.inlay_hint.enable(true)
+
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
       callback = function(ev)
@@ -63,6 +65,9 @@ return {
 
         opts.desc = "See available code actions"
         keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
+
+        opts.desc = "Toggle inlay hint"
+        keymap.set("n", "<leader>lh", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, opts) -- toggle inlay hint
 
         opts.desc = "Smart rename"
         keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts) -- smart rename
